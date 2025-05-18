@@ -18,3 +18,4 @@ log:
 
 push: build
 	@docker push lattots/hasukoira:latest
+	@scp ./deploy/.env lattots@piikki.stadi.ninja:/hasukoira/deploy/.env
