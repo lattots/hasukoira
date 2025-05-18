@@ -1,0 +1,14 @@
+services:
+  watchtower:  # Watches for updates to web app or telegram bot images
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 3600  # Interval (seconds) for polling Docker Hub
+    restart: unless-stopped  # Auto-restart if the container crashes
+
+  hasukoira:
+    image: lattots/hasukoira:latest  # What image to use
+    container_name: hasukoira-container  # Set the container name
+    restart: unless-stopped  # Auto-restart if the container crashes
+    environment:
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}

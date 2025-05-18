@@ -11,15 +11,9 @@ import (
 
 	"github.com/go-telegram/bot"
 	"github.com/go-telegram/bot/models"
-	"github.com/joho/godotenv"
 )
 
 func main() {
-	err := godotenv.Load("./data/secrets.env")
-	if err != nil {
-		log.Fatalln("error loading environment variables: ", err)
-	}
-
 	fmt.Println("Creating bot...")
 	b, err := bot.New(os.Getenv("TELEGRAM_BOT_TOKEN"), bot.WithDefaultHandler(defaultHandler))
 	if err != nil {

@@ -1,2 +1,2 @@
-data/secrets.env
+deploy/.env
 .idea
