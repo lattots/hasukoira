@@ -9,7 +9,7 @@ Hassukoira on Telegram-botti, joka tervehtii kaikkia hänelle viestittäviä.
 Hassukoira on rakennettu Dockerin avulla, joten sen ajaminen on hyvin helppoa. Voit ajaa paikallisen kontin komennolla:
 
 ```bash
-make run
+make compup
 ```
 
 Komento rakentaa ja ajaa kontin. Mikäli haluat pysäyttää kontin ja siivota jälkesi, aja komento:
